@@ -51,6 +51,8 @@ always begin #(`CYCLE/2) clk = ~clk; end
 initial begin
 	//$fsdbDumpfile("LBP.fsdb");
 	//$fsdbDumpvars;
+	$dumpfile("LBP.vcd");
+	$dumpvars;
 end
 
 initial begin  // data input

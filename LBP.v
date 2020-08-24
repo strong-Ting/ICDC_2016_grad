@@ -29,14 +29,14 @@ assign x_f = x + 7'd1;
 assign y_b = y - 7'd1;
 assign y_f = y + 7'd1;
 
-wire [13:0] gc_addr,g0_addr,g1_addr,g2_addr,g3_addr,g4_addr,g5_addr,g6_addr,g7_addr;
+wire [13:0] g0_addr,g1_addr,g2_addr,g3_addr,g4_addr,g5_addr,g6_addr,g7_addr;
+reg [13:0] gc_addr;
 
 assign g0_addr = {y_b,x_b};
 assign g1_addr = {y_b,x};
 assign g2_addr = {y_b,x_f};
 
 assign g3_addr = {y,x_b};
-assign gc_addr = {y,x};
 assign g4_addr = {y,x_f};
 
 assign g5_addr = {y_f,x_b};
@@ -90,24 +90,30 @@ end
 always@(posedge clk or posedge reset)
 begin
     if(reset) x <= 7'd1;
-    else if(current_state == RESULT && x == 7'd126) x <= 7'd1;
-    else if(current_state == RESULT) x <= x + 7'd1;
+    else if(next_state == RESULT && x == 7'd126) x <= 7'd1;
+    else if(next_state == RESULT) x <= x + 7'd1;
 end
 
 always@(posedge clk or posedge reset)
 begin
     if(reset) y <= 7'd1;
-    else if(current_state == RESULT && x == 7'd126) y <= y + 7'd1;
+    else if(next_state == RESULT && x == 7'd126) y <= y + 7'd1;
 end
 
 //counter_G
 always@(posedge clk or posedge reset)
 begin
     if(reset) counter_G <= 4'd0;
-    else if(current_state == READ_gp) counter_G <= counter_G + 4'd1;
+    else if(next_state == READ_gp) counter_G <= counter_G + 4'd1;
     else if(current_state == RESULT) counter_G <= 4'd0;
 end
 
+//gc_addr
+always@(posedge clk or posedge reset)
+begin
+    if(reset) gc_addr <= 14'd129;
+    else if(next_state == READ_gc) gc_addr <= {y,x};
+end
 
 //output
 
@@ -138,7 +144,7 @@ end
 always@(posedge clk or posedge reset)
 begin
     if(reset) gray_addr <= 14'd0;
-    else if(next_state == READ_gc) gray_addr <= gc_addr;
+    else if(next_state == READ_gc) gray_addr <= {y,x};
     else if(next_state == READ_gp)
     begin
         case(counter_G)
@@ -171,7 +177,7 @@ begin
         lbp_data <= 8'd0;
         gc_data <= 8'd0;
     end
-    else if(current_state == READ_gp && counter_G == 4'd0) gc_data <= gray_data;
+    else if(current_state == READ_gc) gc_data <= gray_data;
     else if(current_state == READ_gp)
     begin
         if(gray_data>=gc_data) lbp_data <= lbp_data + (8'd1 << counter_G_cutOne);
