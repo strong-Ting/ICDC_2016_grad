@@ -20,38 +20,18 @@ reg [7:0] lbp_data;
 reg finish;
 
 reg [2:0] current_state,next_state; 
-reg [6:0] x,y;
-wire [6:0] x_b,x_f,y_b,y_f;
-reg [3:0] counter_G;
 
-assign x_b = x - 7'd1;
-assign x_f = x + 7'd1;
-assign y_b = y - 7'd1;
-assign y_f = y + 7'd1;
+reg [13:0] counter_addr;
+reg [7:0] lineBuffer0 [127:0];
+reg [7:0] lineBuffer1 [127:0];
+reg [7:0] lineBuffer2 [2:0];
 
-wire [13:0] g0_addr,g1_addr,g2_addr,g3_addr,g4_addr,g5_addr,g6_addr,g7_addr;
-reg [13:0] gc_addr;
 
-assign g0_addr = {y_b,x_b};
-assign g1_addr = {y_b,x};
-assign g2_addr = {y_b,x_f};
-
-assign g3_addr = {y,x_b};
-assign g4_addr = {y,x_f};
-
-assign g5_addr = {y_f,x_b};
-assign g6_addr = {y_f,x};
-assign g7_addr = {y_f,x_f};
-
-reg [7:0] gc_data;
-
-wire [3:0] counter_G_cutOne;
-assign counter_G_cutOne = counter_G - 4'd1;
 //state
 parameter IDLE = 3'd0;
-parameter READ_gc = 3'd1;
-parameter READ_gp = 3'd2;
-parameter RESULT = 3'd3;
+parameter LOAD_LINEBUFFER = 3'd1;
+parameter READ_COMPUTE = 3'd2;
+parameter LINEBUFFER_ZERO_PADDING = 3'd3;
 parameter FINISH = 3'd4;
 
 //switch state
@@ -67,52 +47,57 @@ begin
     case(current_state)
     IDLE: 
     begin
-        if(gray_ready == 1'd1) next_state = READ_gc;
+        if(gray_ready == 1'd1) next_state = LOAD_LINEBUFFER;
         else next_state = IDLE;
     end
-    READ_gc: next_state = READ_gp;
-    READ_gp:
+    LOAD_LINEBUFFER:
     begin
-        if(counter_G == 4'd8) next_state = RESULT;
-        else next_state = READ_gp;
+        if(gray_addr == 14'd258) next_state = READ_COMPUTE;
+        else next_state = LOAD_LINEBUFFER;
     end
-    RESULT: 
+    READ_COMPUTE:
     begin
-        if(gc_addr == 14'd16254) next_state = FINISH; //128*128-128-1-1 = 162454
-        else next_state = READ_gc;
+        if(gray_addr == 14'd16125) next_state = LINEBUFFER_ZERO_PADDING;
+        else next_state = READ_COMPUTE;
+    end
+    LINEBUFFER_ZERO_PADDING:
+    begin
+        if(lbp_addr == 14'd16254) next_state = FINISH;
+        else next_state = LINEBUFFER_ZERO_PADDING;
     end
     FINISH: next_state = FINISH;
     default: next_state = IDLE;
     endcase
 end
 
-//index x y
+//line buffer
+integer i;
 always@(posedge clk or posedge reset)
 begin
-    if(reset) x <= 7'd1;
-    else if(next_state == RESULT && x == 7'd126) x <= 7'd1;
-    else if(next_state == RESULT) x <= x + 7'd1;
-end
-
-always@(posedge clk or posedge reset)
-begin
-    if(reset) y <= 7'd1;
-    else if(next_state == RESULT && x == 7'd126) y <= y + 7'd1;
-end
-
-//counter_G
-always@(posedge clk or posedge reset)
-begin
-    if(reset) counter_G <= 4'd0;
-    else if(next_state == READ_gp) counter_G <= counter_G + 4'd1;
-    else if(current_state == RESULT) counter_G <= 4'd0;
-end
-
-//gc_addr
-always@(posedge clk or posedge reset)
-begin
-    if(reset) gc_addr <= 14'd129;
-    else if(next_state == READ_gc) gc_addr <= {y,x};
+    if(reset) 
+    begin
+        for(i=0;i<128;i++)
+        begin
+            lineBuffer0[i] <= 14'd0;
+            lineBuffer1[i] <= 14'd0;
+        end
+        lineBuffer2[0] <= 14'd0;
+        lineBuffer2[1] <= 14'd0;
+        lineBuffer2[2] <= 14'd0;
+    end
+    else if(current_state == LOAD_LINEBUFFER)
+    begin
+        lineBuffer0[0] <= gray_data;
+        lineBuffer1[0] <= lineBuffer0[127];
+        for(i=0;i<127;i++)
+        begin
+            lineBuffer0[i+1] <= lineBuffer0[i];
+            lineBuffer1[i+1] <= lineBuffer1[i];
+        end
+        lineBuffer2[0] <= lineBuffer1[127];
+        lineBuffer2[1] <= lineBuffer2[0];
+        lineBuffer2[2] <= lineBuffer2[1];
+    end
 end
 
 //output
@@ -121,16 +106,14 @@ end
 always@(posedge clk or posedge reset)
 begin
     if(reset) gray_req <= 1'd0;
-    else if(next_state == READ_gc || next_state == READ_gp) gray_req <= 1'd1;
-    else gray_req <= 1'd0;
+    
 end
 
 //lbp_valid
 always@(posedge clk or posedge reset)
 begin
     if(reset) lbp_valid <= 1'd0;
-    else if(next_state == RESULT) lbp_valid <= 1'd1;
-    else lbp_valid <= 1'd0;
+    
 end
 
 //finish
@@ -144,45 +127,20 @@ end
 always@(posedge clk or posedge reset)
 begin
     if(reset) gray_addr <= 14'd0;
-    else if(next_state == READ_gc) gray_addr <= {y,x};
-    else if(next_state == READ_gp)
-    begin
-        case(counter_G)
-        4'd0: gray_addr <= g0_addr;
-        4'd1: gray_addr <= g1_addr;
-        4'd2: gray_addr <= g2_addr;
-        
-        4'd3: gray_addr <= g3_addr;
-        4'd4: gray_addr <= g4_addr;
-        
-        4'd5: gray_addr <= g5_addr;
-        4'd6: gray_addr <= g6_addr;
-        4'd7: gray_addr <= g7_addr;
-        endcase
-    end
+    
 end
 
 //lbp_addr
 always@(posedge clk or posedge reset)
 begin
     if(reset) lbp_addr <= 14'd0;
-    else if(next_state == RESULT) lbp_addr <= gc_addr;
 end
 
 //lbp_data
 always@(posedge clk or posedge reset)
 begin
-    if(reset) 
-    begin
-        lbp_data <= 8'd0;
-        gc_data <= 8'd0;
-    end
-    else if(current_state == READ_gc) gc_data <= gray_data;
-    else if(current_state == READ_gp)
-    begin
-        if(gray_data>=gc_data) lbp_data <= lbp_data + (8'd1 << counter_G_cutOne);
-    end
-    else if(current_state == RESULT) lbp_data <= 8'd0;
+    if(reset) lbp_data <= 8'd0;
+       
 end
 
 //====================================================================
