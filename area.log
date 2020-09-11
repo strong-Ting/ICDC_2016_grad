@@ -19,6 +19,7 @@ Number of macros/black boxes:               0
 Number of buf/inv:                         83
 Number of references:                      58
 
+Combinational area:               3001.003238
 Buf/Inv area:                      858.884430
 Noncombinational area:            2642.851715
 Macro/Black Box area:                0.000000
