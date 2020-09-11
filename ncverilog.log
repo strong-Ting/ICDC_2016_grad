@@ -1,0 +1,70 @@
+ncverilog: 11.10-s072: (c) Copyright 1995-2013 Cadence Design Systems, Inc.
+TOOL:	ncverilog	11.10-s072: Started on Sep 07, 2020 at 14:50:41 CST
+ncverilog
+	testfixture.v
+	LBP_syn.v
+	-v
+	tsmc13_neg.v
+	+define+SDF
+Loading snapshot worklib.testfixture:v .................... Done
+*Verdi3* Loading libsscore_ius111.so
+*Verdi3* : Enable Parallel Dumping.
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+ncsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testfixture.v, line = 55, pos = 9
+           Scope: testfixture
+            Time: 0 FS + 0
+
+-----------------------------------------------------
+
+START!!! Simulation Start .....
+
+-----------------------------------------------------
+
+Output pixel: 0 ~           0 are correct!
+
+Output pixel: 0 ~        1000 are correct!
+
+Output pixel: 0 ~        2000 are correct!
+
+Output pixel: 0 ~        3000 are correct!
+
+Output pixel: 0 ~        4000 are correct!
+
+Output pixel: 0 ~        5000 are correct!
+
+Output pixel: 0 ~        6000 are correct!
+
+Output pixel: 0 ~        7000 are correct!
+
+Output pixel: 0 ~        8000 are correct!
+
+Output pixel: 0 ~        9000 are correct!
+
+Output pixel: 0 ~       10000 are correct!
+
+Output pixel: 0 ~       11000 are correct!
+
+Output pixel: 0 ~       12000 are correct!
+
+Output pixel: 0 ~       13000 are correct!
+
+Output pixel: 0 ~       14000 are correct!
+
+Output pixel: 0 ~       15000 are correct!
+
+Output pixel: 0 ~       16000 are correct!
+
+Output pixel: 0 ~       16383 are correct!
+
+-----------------------------------------------------
+
+Congratulations! All data have been generated successfully!
+
+-------------------------PASS------------------------
+
+Simulation complete via $finish(1) at time 1984587500 PS + 0
+./testfixture.v:130       #(`CYCLE/2); $finish;
+ncsim> exit
+TOOL:	ncverilog	11.10-s072: Exiting on Sep 07, 2020 at 14:50:45 CST  (total: 00:00:04)
