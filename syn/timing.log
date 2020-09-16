@@ -1,0 +1,59 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : LBP
+Version: Q-2019.12
+Date   : Wed Sep 16 18:15:57 2020
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: gray_ready (input port clocked by clk)
+  Endpoint: gray_addr_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LBP                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     5.00       5.50 f
+  gray_ready (in)                          0.01       5.51 f
+  U375/Y (NAND4X1)                         0.15       5.66 r
+  U221/Y (OAI211X4)                        0.34       6.00 f
+  U299/Y (AND2X2)                          0.23       6.23 f
+  U279/Y (CLKBUFX3)                        0.24       6.47 f
+  U275/Y (INVX3)                           0.48       6.95 r
+  U274/Y (NAND2X1)                         0.31       7.26 f
+  U383/Y (OA21XL)                          0.33       7.59 f
+  U382/Y (CLKBUFX3)                        0.67       8.26 f
+  U298/Y (NOR2BX1)                         0.44       8.69 f
+  U297/Y (CLKBUFX3)                        0.66       9.35 f
+  U332/Y (NAND2X1)                         0.36       9.72 r
+  U331/Y (OAI221XL)                        0.27       9.99 f
+  gray_addr_reg[4]/D (DFFRX1)              0.00       9.99 f
+  data arrival time                                   9.99
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  gray_addr_reg[4]/CK (DFFRX1)             0.00      10.40 r
+  library setup time                      -0.27      10.13
+  data required time                                 10.13
+  -----------------------------------------------------------
+  data required time                                 10.13
+  data arrival time                                  -9.99
+  -----------------------------------------------------------
+  slack (MET)                                         0.14
+
+
+1

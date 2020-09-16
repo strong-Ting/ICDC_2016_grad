@@ -1,3 +1,0 @@
-1599806748 /home/M10912039/GitHub/CIC_2016_grad/testfixture.v
-1599806713 /home/M10912039/GitHub/CIC_2016_grad/LBP.v
-1599806713 /home/M10912039/GitHub/CIC_2016_grad/LBP_syn.v

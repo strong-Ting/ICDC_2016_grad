@@ -1,3 +1,0 @@
-Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/vfast -silent -del . -o /home/M10912039/GitHub/CIC_2016_grad/LBP.vcd.fsdb -ft verilog /home/M10912039/GitHub/CIC_2016_grad/LBP.vcd
-uname(Linux DICS60 2.6.18-404.el5 #1 SMP Tue Apr 7 12:42:54 EDT 2015 x86_64)
-au time 0.984736 0.901862 0.018997 delta 48177152 50278400 total 48243704 50344952
