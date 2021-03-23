@@ -1,0 +1,10 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09)
+Command arguments:
+    +define+verilog
+    testfixture_a.v
+    CLE.v
+
+Highest level modules:
+test
+
+Total	0 error(s),   0 warning(s)

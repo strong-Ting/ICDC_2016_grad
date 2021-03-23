@@ -1,0 +1,507 @@
+ncverilog: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s039: Started on Mar 23, 2021 at 16:31:10 CST
+ncverilog
+	testfixture_a.v
+	CLE_syn.v
+	-v
+	tsmc13_neg.v
+	+define+SDF
+	+access+r
+file: testfixture_a.v
+	module worklib.rom_128x8:v
+		errors: 0, warnings: 0
+	module worklib.sram_1024x8:v
+		errors: 0, warnings: 0
+	module worklib.test:v
+		errors: 0, warnings: 0
+file: CLE_syn.v
+	module worklib.CLE_DW01_inc_0:v
+		errors: 0, warnings: 0
+	module worklib.CLE:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+		Caching library 'tsmc13_neg' ....... Done
+	Elaborating the design hierarchy:
+  TLATX1 \ns_reg[3]  ( .G(N154), .D(N158), .Q(ns[3]) );
+                   |
+ncelab: *W,CUVWSP (./CLE_syn.v,858|19): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  TLATX1 \ns_reg[2]  ( .G(N154), .D(N157), .Q(ns[2]) );
+                   |
+ncelab: *W,CUVWSP (./CLE_syn.v,859|19): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  TLATX1 \ns_reg[0]  ( .G(N154), .D(n4738), .Q(ns[0]) );
+                   |
+ncelab: *W,CUVWSP (./CLE_syn.v,860|19): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  TLATX1 \ns_reg[1]  ( .G(N154), .D(N156), .Q(ns[1]) );
+                   |
+ncelab: *W,CUVWSP (./CLE_syn.v,861|19): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  DFFSX1 \cnt_no_reg[5]  ( .D(n1591), .CK(clk), .SN(n4543), .QN(n1517) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,866|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18583): Q
+
+  TLATX1 \sram_d_next_reg[7]  ( .G(N598), .D(N606), .Q(sram_d_next[7]) );
+                            |
+ncelab: *W,CUVWSP (./CLE_syn.v,2949|28): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  TLATX1 \sram_d_next_reg[6]  ( .G(N598), .D(N605), .Q(sram_d_next[6]) );
+                            |
+ncelab: *W,CUVWSP (./CLE_syn.v,2950|28): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  TLATX1 \sram_d_next_reg[5]  ( .G(N598), .D(N604), .Q(sram_d_next[5]) );
+                            |
+ncelab: *W,CUVWSP (./CLE_syn.v,2951|28): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  TLATX1 \sram_d_next_reg[4]  ( .G(N598), .D(N603), .Q(sram_d_next[4]) );
+                            |
+ncelab: *W,CUVWSP (./CLE_syn.v,2952|28): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  TLATX1 \sram_d_next_reg[3]  ( .G(N598), .D(N602), .Q(sram_d_next[3]) );
+                            |
+ncelab: *W,CUVWSP (./CLE_syn.v,2953|28): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  TLATX1 \sram_d_next_reg[2]  ( .G(N598), .D(N601), .Q(sram_d_next[2]) );
+                            |
+ncelab: *W,CUVWSP (./CLE_syn.v,2954|28): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  TLATX1 \sram_d_next_reg[1]  ( .G(N598), .D(N600), .Q(sram_d_next[1]) );
+                            |
+ncelab: *W,CUVWSP (./CLE_syn.v,2955|28): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  TLATX1 \sram_d_next_reg[0]  ( .G(N598), .D(N599), .Q(sram_d_next[0]) );
+                            |
+ncelab: *W,CUVWSP (./CLE_syn.v,2956|28): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,26772): QN
+
+  DFFRX1 \sram_d_reg[0]  ( .D(sram_d_next[0]), .CK(clk), .RN(n4543), .QN(n2774) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,2995|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_d_reg[1]  ( .D(sram_d_next[1]), .CK(clk), .RN(n4543), .QN(n2772) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,2996|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_d_reg[2]  ( .D(sram_d_next[2]), .CK(clk), .RN(n4543), .QN(n2770) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,2997|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_d_reg[3]  ( .D(sram_d_next[3]), .CK(clk), .RN(n4543), .QN(n2768) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,2998|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_d_reg[4]  ( .D(sram_d_next[4]), .CK(clk), .RN(n4542), .QN(n2766) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,2999|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_d_reg[5]  ( .D(sram_d_next[5]), .CK(clk), .RN(n4542), .QN(n2764) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,3000|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_d_reg[6]  ( .D(sram_d_next[6]), .CK(clk), .RN(n4542), .QN(n2762) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,3001|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_d_reg[7]  ( .D(sram_d_next[7]), .CK(clk), .RN(n4542), .QN(n2760) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,3002|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \cnt_times_reg[2]  ( .D(n2674), .CK(clk), .RN(n4728), .QN(n1547) );
+                          |
+ncelab: *W,CUVWSP (./CLE_syn.v,3003|26): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \mask_reg[0][0]  ( .D(n1637), .CK(clk), .RN(n4728), .QN(n1589) );
+                        |
+ncelab: *W,CUVWSP (./CLE_syn.v,3004|24): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \rom_a_reg[0]  ( .D(n4747), .CK(clk), .RN(n4728), .QN(n2736) );
+                      |
+ncelab: *W,CUVWSP (./CLE_syn.v,7844|22): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \rom_a_reg[1]  ( .D(n4748), .CK(clk), .RN(n4728), .QN(n2734) );
+                      |
+ncelab: *W,CUVWSP (./CLE_syn.v,7845|22): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \rom_a_reg[2]  ( .D(n4749), .CK(clk), .RN(n4728), .QN(n2728) );
+                      |
+ncelab: *W,CUVWSP (./CLE_syn.v,7846|22): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \rom_a_reg[3]  ( .D(n4750), .CK(clk), .RN(n4728), .QN(n2730) );
+                      |
+ncelab: *W,CUVWSP (./CLE_syn.v,7847|22): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \rom_a_reg[4]  ( .D(n4751), .CK(clk), .RN(n4728), .QN(n2726) );
+                      |
+ncelab: *W,CUVWSP (./CLE_syn.v,7848|22): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \rom_a_reg[5]  ( .D(n4752), .CK(clk), .RN(n4728), .QN(n2732) );
+                      |
+ncelab: *W,CUVWSP (./CLE_syn.v,7849|22): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \rom_a_reg[6]  ( .D(n4753), .CK(clk), .RN(n4728), .QN(n2738) );
+                      |
+ncelab: *W,CUVWSP (./CLE_syn.v,7850|22): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_a_reg[7]  ( .D(sram_a_next[7]), .CK(clk), .RN(n4728), .QN(n2720) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,7855|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_a_reg[8]  ( .D(sram_a_next[8]), .CK(clk), .RN(n4728), .QN(n2722) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,7856|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_a_reg[6]  ( .D(sram_a_next[6]), .CK(clk), .RN(n4728), .QN(n2718) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,7857|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_a_reg[9]  ( .D(sram_a_next[9]), .CK(clk), .RN(n4728), .QN(n2724) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,7858|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_a_reg[5]  ( .D(sram_a_next[5]), .CK(clk), .RN(n4728), .QN(n2716) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,7859|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_a_reg[0]  ( .D(sram_a_next[0]), .CK(clk), .RN(n4728), .QN(n2705) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,7860|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_a_reg[4]  ( .D(sram_a_next[4]), .CK(clk), .RN(n4728), .QN(n2712) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,7861|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_a_reg[2]  ( .D(sram_a_next[2]), .CK(clk), .RN(n4728), .QN(n2710) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,7862|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_a_reg[1]  ( .D(sram_a_next[1]), .CK(clk), .RN(n4728), .QN(n2707) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,7863|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 \sram_a_reg[3]  ( .D(sram_a_next[3]), .CK(clk), .RN(n4728), .QN(n2714) );
+                       |
+ncelab: *W,CUVWSP (./CLE_syn.v,7864|23): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFRX1 OBJ_flag_reg ( .D(n2672), .CK(clk), .RN(n4728), .QN(n486) );
+                    |
+ncelab: *W,CUVWSP (./CLE_syn.v,7865|20): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18307): Q
+
+  DFFSX1 sram_wen_reg ( .D(n4884), .CK(clk), .SN(n4728), .Q(n4904) );
+                    |
+ncelab: *W,CUVWSP (./CLE_syn.v,7866|20): 1 output port was not connected:
+ncelab: (./tsmc13_neg.v,18583): QN
+
+	Reading SDF file from location "./CLE_syn.sdf"
+	Annotating SDF timing data:
+		Compiled SDF file:     CLE_syn.sdf.X
+		Log file:              
+		Backannotation scope:  test.u_CLE
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.add_224.U2 of module XOR2X1 <./CLE_syn.sdf, line 15997>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.add_224.U2 of module XOR2X1 <./CLE_syn.sdf, line 15998>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.add_224.U2 of module XOR2X1 <./CLE_syn.sdf, line 16001>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.add_224.U2 of module XOR2X1 <./CLE_syn.sdf, line 16002>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.u_CLE.add_224.U1_1_3 of module ADDHXL <./CLE_syn.sdf, line 16024>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.u_CLE.add_224.U1_1_3 of module ADDHXL <./CLE_syn.sdf, line 16025>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.u_CLE.add_224.U1_1_3 of module ADDHXL <./CLE_syn.sdf, line 16028>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.u_CLE.add_224.U1_1_3 of module ADDHXL <./CLE_syn.sdf, line 16029>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.u_CLE.add_224.U1_1_4 of module ADDHXL <./CLE_syn.sdf, line 16042>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.u_CLE.add_224.U1_1_4 of module ADDHXL <./CLE_syn.sdf, line 16043>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.u_CLE.add_224.U1_1_4 of module ADDHXL <./CLE_syn.sdf, line 16046>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.u_CLE.add_224.U1_1_4 of module ADDHXL <./CLE_syn.sdf, line 16047>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.u_CLE.add_224.U1_1_1 of module ADDHXL <./CLE_syn.sdf, line 16060>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.u_CLE.add_224.U1_1_1 of module ADDHXL <./CLE_syn.sdf, line 16061>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.u_CLE.add_224.U1_1_1 of module ADDHXL <./CLE_syn.sdf, line 16064>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.u_CLE.add_224.U1_1_1 of module ADDHXL <./CLE_syn.sdf, line 16065>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.u_CLE.add_224.U1_1_2 of module ADDHXL <./CLE_syn.sdf, line 16078>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.u_CLE.add_224.U1_1_2 of module ADDHXL <./CLE_syn.sdf, line 16079>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.u_CLE.add_224.U1_1_2 of module ADDHXL <./CLE_syn.sdf, line 16082>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.u_CLE.add_224.U1_1_2 of module ADDHXL <./CLE_syn.sdf, line 16083>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.u_CLE.add_224.U1_1_5 of module ADDHXL <./CLE_syn.sdf, line 16096>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.u_CLE.add_224.U1_1_5 of module ADDHXL <./CLE_syn.sdf, line 16097>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.u_CLE.add_224.U1_1_5 of module ADDHXL <./CLE_syn.sdf, line 16100>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.u_CLE.add_224.U1_1_5 of module ADDHXL <./CLE_syn.sdf, line 16101>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U5268 of module XOR2X1 <./CLE_syn.sdf, line 16355>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U5268 of module XOR2X1 <./CLE_syn.sdf, line 16356>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U5268 of module XOR2X1 <./CLE_syn.sdf, line 16359>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U5268 of module XOR2X1 <./CLE_syn.sdf, line 16360>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U5266 of module XNOR2X1 <./CLE_syn.sdf, line 16381>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U5266 of module XNOR2X1 <./CLE_syn.sdf, line 16382>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U5266 of module XNOR2X1 <./CLE_syn.sdf, line 16385>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U5266 of module XNOR2X1 <./CLE_syn.sdf, line 16386>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U5255 of module XOR2X1 <./CLE_syn.sdf, line 16502>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U5255 of module XOR2X1 <./CLE_syn.sdf, line 16503>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U5255 of module XOR2X1 <./CLE_syn.sdf, line 16506>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U5255 of module XOR2X1 <./CLE_syn.sdf, line 16507>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U5253 of module XNOR2X1 <./CLE_syn.sdf, line 16528>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U5253 of module XNOR2X1 <./CLE_syn.sdf, line 16529>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U5253 of module XNOR2X1 <./CLE_syn.sdf, line 16532>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U5253 of module XNOR2X1 <./CLE_syn.sdf, line 16533>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U5248 of module XOR2X1 <./CLE_syn.sdf, line 16586>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U5248 of module XOR2X1 <./CLE_syn.sdf, line 16587>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U5248 of module XOR2X1 <./CLE_syn.sdf, line 16590>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U5248 of module XOR2X1 <./CLE_syn.sdf, line 16591>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U5246 of module XNOR2X1 <./CLE_syn.sdf, line 16612>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U5246 of module XNOR2X1 <./CLE_syn.sdf, line 16613>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U5246 of module XNOR2X1 <./CLE_syn.sdf, line 16616>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U5246 of module XNOR2X1 <./CLE_syn.sdf, line 16617>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U5241 of module XOR2X1 <./CLE_syn.sdf, line 16670>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U5241 of module XOR2X1 <./CLE_syn.sdf, line 16671>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U5241 of module XOR2X1 <./CLE_syn.sdf, line 16674>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U5241 of module XOR2X1 <./CLE_syn.sdf, line 16675>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U5232 of module XOR2X1 <./CLE_syn.sdf, line 16769>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U5232 of module XOR2X1 <./CLE_syn.sdf, line 16770>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U5232 of module XOR2X1 <./CLE_syn.sdf, line 16773>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U5232 of module XOR2X1 <./CLE_syn.sdf, line 16774>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U3835 of module XOR2X1 <./CLE_syn.sdf, line 33634>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U3835 of module XOR2X1 <./CLE_syn.sdf, line 33635>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U3835 of module XOR2X1 <./CLE_syn.sdf, line 33638>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U3835 of module XOR2X1 <./CLE_syn.sdf, line 33639>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U2759 of module XOR2X1 <./CLE_syn.sdf, line 46494>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U2759 of module XOR2X1 <./CLE_syn.sdf, line 46495>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U2759 of module XOR2X1 <./CLE_syn.sdf, line 46498>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U2759 of module XOR2X1 <./CLE_syn.sdf, line 46499>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U2736 of module XOR2X1 <./CLE_syn.sdf, line 46769>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U2736 of module XOR2X1 <./CLE_syn.sdf, line 46770>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U2736 of module XOR2X1 <./CLE_syn.sdf, line 46773>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U2736 of module XOR2X1 <./CLE_syn.sdf, line 46774>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U2730 of module XOR2X1 <./CLE_syn.sdf, line 46838>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U2730 of module XOR2X1 <./CLE_syn.sdf, line 46839>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U2730 of module XOR2X1 <./CLE_syn.sdf, line 46842>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U2730 of module XOR2X1 <./CLE_syn.sdf, line 46843>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U2720 of module XOR2X1 <./CLE_syn.sdf, line 46962>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U2720 of module XOR2X1 <./CLE_syn.sdf, line 46963>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U2720 of module XOR2X1 <./CLE_syn.sdf, line 46966>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U2720 of module XOR2X1 <./CLE_syn.sdf, line 46967>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U2719 of module XOR2X1 <./CLE_syn.sdf, line 46978>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U2719 of module XOR2X1 <./CLE_syn.sdf, line 46979>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U2719 of module XOR2X1 <./CLE_syn.sdf, line 46982>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U2719 of module XOR2X1 <./CLE_syn.sdf, line 46983>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U2718 of module XOR2X1 <./CLE_syn.sdf, line 46994>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U2718 of module XOR2X1 <./CLE_syn.sdf, line 46995>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U2718 of module XOR2X1 <./CLE_syn.sdf, line 46998>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U2718 of module XOR2X1 <./CLE_syn.sdf, line 46999>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U2716 of module XOR2X1 <./CLE_syn.sdf, line 47021>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U2716 of module XOR2X1 <./CLE_syn.sdf, line 47022>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U2716 of module XOR2X1 <./CLE_syn.sdf, line 47025>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U2716 of module XOR2X1 <./CLE_syn.sdf, line 47026>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U2715 of module XOR2X1 <./CLE_syn.sdf, line 47037>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U2715 of module XOR2X1 <./CLE_syn.sdf, line 47038>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U2715 of module XOR2X1 <./CLE_syn.sdf, line 47041>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U2715 of module XOR2X1 <./CLE_syn.sdf, line 47042>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.u_CLE.U2713 of module ADDHXL <./CLE_syn.sdf, line 47065>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.u_CLE.U2713 of module ADDHXL <./CLE_syn.sdf, line 47066>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.u_CLE.U2713 of module ADDHXL <./CLE_syn.sdf, line 47069>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.u_CLE.U2713 of module ADDHXL <./CLE_syn.sdf, line 47070>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.u_CLE.U2712 of module ADDHXL <./CLE_syn.sdf, line 47083>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.u_CLE.U2712 of module ADDHXL <./CLE_syn.sdf, line 47084>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.u_CLE.U2712 of module ADDHXL <./CLE_syn.sdf, line 47087>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.u_CLE.U2712 of module ADDHXL <./CLE_syn.sdf, line 47088>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_CLE.U2711 of module XOR2X1 <./CLE_syn.sdf, line 47099>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_CLE.U2711 of module XOR2X1 <./CLE_syn.sdf, line 47100>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_CLE.U2711 of module XOR2X1 <./CLE_syn.sdf, line 47103>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_CLE.U2711 of module XOR2X1 <./CLE_syn.sdf, line 47104>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.u_CLE.U2710 of module ADDHX1 <./CLE_syn.sdf, line 47117>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.u_CLE.U2710 of module ADDHX1 <./CLE_syn.sdf, line 47118>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.u_CLE.U2710 of module ADDHX1 <./CLE_syn.sdf, line 47121>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.u_CLE.U2710 of module ADDHX1 <./CLE_syn.sdf, line 47122>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.u_CLE.U2709 of module ADDHXL <./CLE_syn.sdf, line 47135>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.u_CLE.U2709 of module ADDHXL <./CLE_syn.sdf, line 47136>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.u_CLE.U2709 of module ADDHXL <./CLE_syn.sdf, line 47139>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.u_CLE.U2709 of module ADDHXL <./CLE_syn.sdf, line 47140>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.u_CLE.U2708 of module ADDHXL <./CLE_syn.sdf, line 47153>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.u_CLE.U2708 of module ADDHXL <./CLE_syn.sdf, line 47154>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.u_CLE.U2708 of module ADDHXL <./CLE_syn.sdf, line 47157>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.u_CLE.U2708 of module ADDHXL <./CLE_syn.sdf, line 47158>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.u_CLE.U2706 of module ADDHXL <./CLE_syn.sdf, line 47180>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.u_CLE.U2706 of module ADDHXL <./CLE_syn.sdf, line 47181>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.u_CLE.U2706 of module ADDHXL <./CLE_syn.sdf, line 47184>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.u_CLE.U2706 of module ADDHXL <./CLE_syn.sdf, line 47185>.
+	Annotation completed with 0 Errors and 120 Warnings
+	SDF statistics: No. of Pathdelays = 16707  Annotated = 99.90% -- No. of Tchecks = 6800  Annotated = 99.09% 
+				        Total 	   Annotated	  Percentage
+		 Path Delays	       16707	       16691	       99.90
+		     $period	           2	           0	        0.00
+		      $width	        3367	        3363	       99.88
+		  $setuphold	        3431	        3375	       98.37
+	Building instance overlay tables: 
+	$readmemb("rom_128x8_verilog_a.rcf", mem );
+	                                       |
+ncelab: *W,MEMODR (./rom_128x8_a.v,123|40): $readmem default memory order incompatible with IEEE1364.
+.................... Done
+	Generating native compiled code:
+		worklib.CLE:v <0x7d36f06f>
+			streams:   0, words:     0
+		worklib.rom_128x8:v <0x38fea755>
+			streams:  13, words:  4778
+		worklib.sram_1024x8:v <0x45fa4fac>
+			streams:  16, words:  7953
+		worklib.test:v <0x16b9576f>
+			streams:   9, words: 19752
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                  4784      93
+		UDPs:                     1129       2
+		Primitives:              14064       8
+		Timing outputs:           5935      23
+		Registers:                1229     106
+		Scalar wires:             7076       -
+		Expanded wires:             16       2
+		Always blocks:               6       6
+		Initial blocks:              7       7
+		Cont. assignments:           3       5
+		Pseudo assignments:          1       1
+		Timing checks:           10231    1369
+		Interconnect:            15468       -
+		Delayed tcheck signals:   3375    1226
+		Simulation timescale:      1ps
+	Writing initial simulation snapshot: worklib.test:v
+Loading snapshot worklib.test:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux, 08/30/2018
+(C) 1996 - 2018 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'CLE.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+Component Labeling Engine Start ...
+.........
+.........
+.........
+System is waiting for your finish signal ... 
+In This Simulation, Your CLE Result is shown as below....
+-----------------------------------------------------
+
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_fa_fa_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_fa_fa_fa_00_00_00_00_00_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_fa_fa_fa_fa_fa_00_00_00_00_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_fa_fa_fa_fa_fa_00_00_00_f9_f9_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_fa_fa_00_00_00_00_f9_00_f9_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_f9_f9_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_f9_f9_00_f9_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f8_f8_f8_f8_00_00_00_00_00_
+00_00_00_00_00_f7_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f8_f8_f8_00_00_f8_f8_f8_00_00_00_
+00_00_00_00_f7_f7_f7_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f8_00_00_00_00_00_00_f8_00_00_00_
+00_00_00_00_00_f7_f7_f7_00_00_00_00_00_00_00_00_00_00_00_00_f8_f8_00_00_00_00_00_00_f8_f8_00_00_
+00_00_00_00_00_f7_f7_f7_f7_00_00_f7_00_00_00_00_00_00_00_00_f8_00_00_00_00_00_00_00_00_f8_00_00_
+00_00_f7_00_f7_f7_f7_f7_f7_f7_f7_f7_f7_00_00_00_00_00_00_00_f8_00_00_00_00_00_00_00_00_f8_00_00_
+00_f7_f7_f7_f7_00_00_f7_f7_f7_00_00_f7_00_00_00_00_00_00_00_f8_f8_00_00_00_00_00_00_f8_f8_00_00_
+00_f7_f7_f7_f7_00_00_00_f7_00_00_00_00_00_00_00_00_00_00_00_00_f8_00_00_00_00_00_f8_f8_00_00_00_
+00_00_f7_f7_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f8_f8_00_00_00_f8_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f8_f8_f8_00_00_00_00_00_
+00_00_00_00_00_00_00_f3_f3_00_00_00_00_00_00_00_00_00_f2_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_f3_00_00_00_00_00_00_00_00_f2_f2_f2_f2_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_f3_f3_00_00_00_00_00_00_f2_f2_00_00_00_f2_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_f3_00_00_00_00_00_00_f2_00_00_00_00_f2_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_f3_00_00_00_00_00_00_f2_00_00_00_00_f2_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_f3_00_00_00_00_00_f2_00_00_00_f2_f2_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_f3_00_00_00_f2_f2_f2_00_00_f2_f2_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_f3_00_00_00_f2_00_00_00_00_f2_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_f3_00_f3_00_00_00_f2_f2_f2_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_f3_00_00_00_00_f2_00_00_f2_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f2_f2_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+Your CLE Result v.s. Expect Result is shown as below....
+-----------------------------------------------------
+
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_fa_fa_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_fa_fa_fa_00_00_00_00_00_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_fa_fa_fa_fa_fa_00_00_00_00_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_fa_fa_fa_fa_fa_00_00_00_f9_f9_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_fa_fa_00_00_00_00_f9_00_f9_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_f9_f9_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_f9_f9_00_f9_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f9_f9_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f8_f8_f8_f8_00_00_00_00_00_
+00_00_00_00_00_f7_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f8_f8_f8_00_00_f8_f8_f8_00_00_00_
+00_00_00_00_f7_f7_f7_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f8_00_00_00_00_00_00_f8_00_00_00_
+00_00_00_00_00_f7_f7_f7_00_00_00_00_00_00_00_00_00_00_00_00_f8_f8_00_00_00_00_00_00_f8_f8_00_00_
+00_00_00_00_00_f7_f7_f7_f7_00_00_f7_00_00_00_00_00_00_00_00_f8_00_00_00_00_00_00_00_00_f8_00_00_
+00_00_f7_00_f7_f7_f7_f7_f7_f7_f7_f7_f7_00_00_00_00_00_00_00_f8_00_00_00_00_00_00_00_00_f8_00_00_
+00_f7_f7_f7_f7_00_00_f7_f7_f7_00_00_f7_00_00_00_00_00_00_00_f8_f8_00_00_00_00_00_00_f8_f8_00_00_
+00_f7_f7_f7_f7_00_00_00_f7_00_00_00_00_00_00_00_00_00_00_00_00_f8_00_00_00_00_00_f8_f8_00_00_00_
+00_00_f7_f7_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f8_f8_00_00_00_f8_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_f8_f8_f8_00_00_00_00_00_
+00_00_00_00_00_00_00_f3_f3_00_00_00_00_00_00_00_00_00_xx_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_f3_00_00_00_00_00_00_00_00_xx_xx_xx_xx_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_f3_f3_00_00_00_00_00_00_xx_xx_00_00_00_xx_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_f3_00_00_00_00_00_00_xx_00_00_00_00_xx_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_f3_00_00_00_00_00_00_xx_00_00_00_00_xx_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_f3_00_00_00_00_00_xx_00_00_00_xx_xx_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_f3_00_00_00_xx_xx_xx_00_00_xx_xx_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_f3_00_00_00_xx_00_00_00_00_xx_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_f3_00_f3_00_00_00_xx_xx_xx_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_f3_00_00_00_00_xx_00_00_xx_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_xx_xx_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_
+-----------------------------------------------------
+
+                 Simulation Summary                  
+
+-----------------------------------------------------
+
+Fail! Some errors have been found! Please Check the log message of 'CLE Result v.s. Expect Result'
+
+-----------------------------------------------------
+
+err=  29
+Simulation complete via $finish(1) at time 29801236 PS + 0
+./testfixture_a.v:201       #(`CYCLE/2); $finish;
+ncsim> exit
+TOOL:	ncverilog	15.20-s039: Exiting on Mar 23, 2021 at 16:31:17 CST  (total: 00:00:07)
