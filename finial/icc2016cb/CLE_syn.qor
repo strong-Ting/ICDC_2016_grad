@@ -2,8 +2,8 @@
 ****************************************
 Report : qor
 Design : CLE
-Version: P-2019.03
-Date   : Tue Mar 23 16:30:01 2021
+Version: Q-2019.12
+Date   : Tue Mar 23 17:46:45 2021
 ****************************************
 
 
@@ -65,10 +65,10 @@ Date   : Tue Mar 23 16:30:01 2021
   -----------------------------------------
   Resource Sharing:                    0.14
   Logic Optimization:                  0.08
-  Mapping Optimization:                0.59
+  Mapping Optimization:                0.57
   -----------------------------------------
-  Overall Compile Time:                1.63
-  Overall Compile Wall Clock Time:     1.89
+  Overall Compile Time:                1.65
+  Overall Compile Wall Clock Time:     1.92
 
   --------------------------------------------------------------------
 

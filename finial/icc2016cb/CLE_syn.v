@@ -1,11 +1,11 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
-// Version   : P-2019.03
-// Date      : Tue Mar 23 16:30:01 2021
+// Version   : Q-2019.12
+// Date      : Tue Mar 23 17:46:45 2021
 /////////////////////////////////////////////////////////////
 
 
-module CLE_DW01_inc_0 ( A, SUM );
+module CLE_DW01_inc_0_DW01_inc_1 ( A, SUM );
   input [6:0] A;
   output [6:0] SUM;
 
@@ -852,7 +852,7 @@ module CLE ( clk, reset, rom_q, rom_a, sram_q, sram_a, sram_d, sram_wen,
   wire   [7:0] max_2;
   wire   [9:0] sram_a_next;
   wire   [7:0] sram_d_next;
-  wire   [4:2] \add_125/carry ;
+  wire   [4:2] \add_123/carry ;
   wire   [4:2] \r424/carry ;
 
   TLATX1 \ns_reg[3]  ( .G(N154), .D(N158), .Q(ns[3]) );
@@ -4173,17 +4173,17 @@ module CLE ( clk, reset, rom_q, rom_a, sram_q, sram_a, sram_d, sram_wen,
   CLKINVX1 U2704 ( .A(n427), .Y(n4745) );
   OAI22X1 U2705 ( .A0(n1582), .A1(n4895), .B0(n1574), .B1(N534), .Y(max_0[7])
          );
-  ADDHXL U2706 ( .A(N70), .B(N69), .CO(\add_125/carry [2]), .S(N419) );
+  ADDHXL U2706 ( .A(N70), .B(N69), .CO(\add_123/carry [2]), .S(N419) );
   CLKINVX1 U2707 ( .A(n1537), .Y(n4892) );
   ADDHXL U2708 ( .A(Y[1]), .B(Y[0]), .CO(\r424/carry [2]), .S(Y_add_1[1]) );
   ADDHXL U2709 ( .A(Y[2]), .B(\r424/carry [2]), .CO(\r424/carry [3]), .S(
         Y_add_1[2]) );
   ADDHX1 U2710 ( .A(N67), .B(\r424/carry [3]), .CO(\r424/carry [4]), .S(N77)
          );
-  XOR2X1 U2711 ( .A(\add_125/carry [4]), .B(n1542), .Y(n2823) );
-  ADDHXL U2712 ( .A(N71), .B(\add_125/carry [2]), .CO(\add_125/carry [3]), .S(
+  XOR2X1 U2711 ( .A(\add_123/carry [4]), .B(n1542), .Y(n2823) );
+  ADDHXL U2712 ( .A(N71), .B(\add_123/carry [2]), .CO(\add_123/carry [3]), .S(
         N420) );
-  ADDHXL U2713 ( .A(N72), .B(\add_125/carry [3]), .CO(\add_125/carry [4]), .S(
+  ADDHXL U2713 ( .A(N72), .B(\add_123/carry [3]), .CO(\add_123/carry [4]), .S(
         N421) );
   OR2X1 U2714 ( .A(cnt_no[1]), .B(cnt_no[0]), .Y(n4623) );
   XOR2X1 U2715 ( .A(n1550), .B(N469), .Y(n42) );
@@ -7839,8 +7839,8 @@ module CLE ( clk, reset, rom_q, rom_a, sram_q, sram_a, sram_d, sram_wen,
   OAI22XL U5287 ( .A0(n4698), .A1(n4708), .B0(n2680), .B1(n4698), .Y(n4699) );
   NAND2BX1 U5288 ( .AN(\mask[4][2] ), .B(max_2[2]), .Y(n4714) );
   NOR2BX1 U5289 ( .AN(\mask[4][2] ), .B(max_2[2]), .Y(n4712) );
-  CLE_DW01_inc_0 add_224 ( .A({N70, N69, N68, N67, Y[2:1], n4448}), .SUM({N548, 
-        N547, N546, N545, N544, N543, N542}) );
+  CLE_DW01_inc_0_DW01_inc_1 add_216 ( .A({N70, N69, N68, N67, Y[2:1], n4448}), 
+        .SUM({N548, N547, N546, N545, N544, N543, N542}) );
   DFFRX1 \rom_a_reg[0]  ( .D(n4747), .CK(clk), .RN(n4728), .QN(n2736) );
   DFFRX1 \rom_a_reg[1]  ( .D(n4748), .CK(clk), .RN(n4728), .QN(n2734) );
   DFFRX1 \rom_a_reg[2]  ( .D(n4749), .CK(clk), .RN(n4728), .QN(n2728) );

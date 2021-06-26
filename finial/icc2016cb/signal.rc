@@ -6,7 +6,7 @@ viewPort 1536 45 1344 777 242 65
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
-openDirFile -d / "" "/home/DICS/M10912039/CIC/CIC_2016_grad/finial/icc2016cb/CLE.fsdb"
+openDirFile -d / -i 0 "" "/home/DICS/M10912039/CIC/CIC_2016_grad/finial/icc2016cb/CLE.fsdb"
 
 ; file time scale:
 ; fileTimeScale ### s|ms|us|ns|ps
@@ -18,16 +18,14 @@ signalSpacing 5
 windowTimeUnit 1ns
 
 ; waveform viewport range
-zoom 1990.688880 2079.947630 1n
-cursor 17545.000000
+zoom 2392.873701 2844.359305 1n
+cursor 3095872.399000
 marker 0.000000
 
-; user define markers
-; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
 top 0
 ; marker line index
-markerPos 26
+markerPos 6
 
 ; event list
 ; addEvent event_name event_expression
@@ -47,37 +45,36 @@ COMPLEX_EVENT_END
 curSTATUS ByChange
 
 
+aliasmapname CLE.cs
+nalias IDLE		4'b0000		NULL
+nalias OP_NO		4'b0100		NULL
+nalias READ_ROM		4'b0001		NULL
+nalias WRITE_OBJ		4'b0101		NULL
+nalias IS_OBJ		4'b0010		NULL
+nalias WRITE_BG		4'b0110		NULL
+nalias READ_OBJ		4'b0011		NULL
+nalias FINISH		4'b0111		NULL
+
 addGroup "G1"
 activeDirFile "" "/home/DICS/M10912039/CIC/CIC_2016_grad/finial/icc2016cb/CLE.fsdb"
 addSignal -h 15 /test/u_CLE/clk
 addSignal -h 15 -holdScope reset
-addSignal -h 15 -holdScope cs[3:0]
-addSignal -h 15 -holdScope ns[3:0]
-addSignal -h 15 -holdScope X[4:0]
-addSignal -h 15 -holdScope Y[4:0]
+aliasname CLE.cs
+addSignal -h 15 -UNSIGNED -HEX -holdScope ns[3:0]
 addSignal -h 15 -UNSIGNED -UDEC -holdScope rom_a[6:0]
-addSignal -h 15 -holdScope rom_q[7:0]
+addSignal -h 15 /test/u_CLE/OBJ_flag_reg/Q
+addSignal -h 15 -holdScope D
+addSignal -h 15 /test/u_CLE/rom_q[7:0]
 addSignal -h 15 -UNSIGNED -UDEC -holdScope sram_a[9:0]
 addSignal -h 15 -holdScope sram_d[7:0]
 addSignal -h 15 -holdScope sram_wen
-addSignal -h 15 -holdScope cnt_times[2:0]
 addSignal -h 15 -holdScope sram_q[7:0]
-addSignal -expanded -h 15 -holdScope mask[8:0]
-addSignal -h 15 -holdScope mask[8][7:0]
-addSignal -h 15 -holdScope mask[7][7:0]
-addSignal -h 15 -holdScope mask[6][7:0]
-addSignal -h 15 -holdScope mask[5][7:0]
-addSignal -h 15 -holdScope mask[4][7:0]
-addSignal -h 15 -holdScope mask[3][7:0]
-addSignal -h 15 -holdScope mask[2][7:0]
-addSignal -h 15 -holdScope mask[1][7:0]
-addSignal -h 15 -holdScope mask[0][7:0]
 addSignal -h 15 /test/u_sram/mem[1023:0]
-addSignal -h 15 /test/u_CLE/cnt_no[7:0]
-addSignal -h 15 -holdScope min[7:0]
-addSignal -h 15 -holdScope finish
+addSignal -h 15 /test/u_CLE/finish
 addGroup "G2"
 addGroup "G3"
+addGroup "G4"
+addGroup "G5"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
@@ -88,6 +85,7 @@ getSignalForm close
 
 "/test"
 "/test/u_CLE"
+"/test/u_CLE/OBJ_flag_reg"
 
 SCOPE_LIST_BEGIN
 "/test"

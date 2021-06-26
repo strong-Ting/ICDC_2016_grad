@@ -2,13 +2,13 @@
 ****************************************
 Report : area
 Design : CLE
-Version: P-2019.03
-Date   : Tue Mar 23 16:30:01 2021
+Version: Q-2019.12
+Date   : Tue Mar 23 17:46:45 2021
 ****************************************
 
 Library(s) Used:
 
-    slow (File: /usr/cad/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db)
+    slow (File: /usr/cad/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
 
 Number of ports:                           59
 Number of nets:                          5909
